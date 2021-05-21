@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">VaccineManagement</string>
+    <string name="user_login">User Login</string>
+    <string name="_18">18+</string>
+</resources>
