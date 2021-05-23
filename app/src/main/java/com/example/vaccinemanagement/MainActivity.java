@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         });
         signuphere=(TextView)findViewById(R.id.signuphere);
         signup = new Intent(this,SignUp.class);
-
+        login_success = new Intent(MainActivity.this, Home.class);
         SharedPreferences prefs = getSharedPreferences("prefs", MODE_PRIVATE);
         boolean firstStart = prefs.getBoolean("firstStart", true);
         if (firstStart) {
@@ -120,9 +120,6 @@ public class MainActivity extends AppCompatActivity {
                         finish();
                     }
                 }
-                Intent myIntent = new Intent(MainActivity.this, Home.class);
-                startActivity(myIntent);
-                finish();
             }
 
         });

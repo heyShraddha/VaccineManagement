@@ -37,7 +37,7 @@ public class SignUp extends AppCompatActivity {
         signup_b = (Button)findViewById(R.id.signup_b);
         loginhere=(TextView)findViewById(R.id.loginhere);
         login = new Intent(this,MainActivity.class);
-
+        signup_success = new Intent(this,Home.class);
 
         signup_b.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -109,7 +109,7 @@ public class SignUp extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if(usernamelo.isErrorEnabled()==true)
+                if(usernamelo.isErrorEnabled())
                 {
                     usernamelo.setErrorEnabled(false);
                 }

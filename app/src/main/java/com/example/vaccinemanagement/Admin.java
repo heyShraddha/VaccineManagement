@@ -28,7 +28,7 @@ public class Admin extends AppCompatActivity {
                     if(ps.getText().toString().equalsIgnoreCase("admin"))
                     {
                         success = 1;
-                        Intent myIntent = new Intent(Admin.this, Home.class);
+                        Intent myIntent = new Intent(Admin.this, FirstActivity.class);
                         startActivity(myIntent);
                         finish();
                     }

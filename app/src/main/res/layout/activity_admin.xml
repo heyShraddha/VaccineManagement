@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/bgg"
+
     android:scaleType = "centerCrop"
     >
     <LinearLayout
@@ -16,74 +16,79 @@
 
         <ImageView
             android:id="@+id/title"
-            android:src="@drawable/logo"
-            android:layout_height="100sp"
+            android:src="@drawable/homepage"
+            android:layout_height="200sp"
             android:layout_width="1000sp"/>
 
-        <LinearLayout
-            android:background="@drawable/curveborder"
-            android:layout_centerInParent="true"
-            android:orientation="vertical"
-            android:id="@+id/loginview"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginBottom="20dp"
-            android:gravity="center_horizontal"
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Admin Login"
+            android:textSize="22sp"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/username_lo"
+            android:layout_margin="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="Admin Login"
-                android:textSize="22sp"
-                />
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/username_lo"
-                android:layout_margin="15dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <EditText
-                    android:id="@+id/username"
-                    android:hint="Username"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/password_lo"
-                android:layout_margin="15dp"
+            <EditText
+                android:id="@+id/username"
+                android:background="@drawable/roundededittext"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:passwordToggleEnabled="true">
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/password"
-                    android:hint="Password"
-                    android:layout_width="match_parent"
-                    android:inputType="textPassword"
-                    android:layout_height="wrap_content"
-                    />
-            </com.google.android.material.textfield.TextInputLayout>
+                android:hint="@string/username" />
 
-            <Button
-                android:id="@+id/login_b"
-                android:paddingLeft="45dp"
-                android:paddingRight="45dp"
-                android:paddingTop="20dp"
-                android:paddingBottom="20dp"
-                android:layout_margin="15dp"
-                android:layout_width="wrap_content"
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/password_lo"
+            android:layout_margin="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:passwordToggleEnabled="true">
+            <EditText
+                android:id="@+id/password"
+                android:hint="Password"
+                android:background="@drawable/roundededittext"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="LOGIN"
                 />
+        </com.google.android.material.textfield.TextInputLayout>
 
-        </LinearLayout>
+        <Button
+            android:id="@+id/login_b"
+            android:paddingLeft="45dp"
+            android:paddingRight="45dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:layout_margin="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LOGIN"
+            />
+
+
+
+        <TextView
+            android:id="@+id/signuphere"
+            android:gravity="end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:textSize="16dp"
+            android:padding="3dp"
+            android:textColor="#000000"
+            android:layout_centerHorizontal="true"
+            android:text="Login as a User? "
+            android:background="#FFFCFC"
+            />
+
     </LinearLayout>
 </RelativeLayout>
