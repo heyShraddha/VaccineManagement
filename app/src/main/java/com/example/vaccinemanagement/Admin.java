@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 public class Admin extends AppCompatActivity {
@@ -18,6 +19,8 @@ public class Admin extends AppCompatActivity {
         EditText un = (EditText) findViewById(R.id.username);
         EditText ps = (EditText)findViewById(R.id.password);
         Button b = (Button)findViewById(R.id.login_b);
+
+
         b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

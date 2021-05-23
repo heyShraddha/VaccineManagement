@@ -10,6 +10,7 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -29,12 +30,22 @@ public class MainActivity extends AppCompatActivity {
     public static String usernametxt,passwordtxt;
     Button login;
     Intent login_success,signup,admin;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
 
+        ImageView Image = (ImageView)findViewById(R.id.title);
+        Image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,FirstActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
         //Getting all users
         databaseHelper = new DatabaseHelper(MainActivity.this);
         List<UserModel> userList = databaseHelper.getUsers();

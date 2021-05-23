@@ -5,4 +5,11 @@
     <string name="todo">TODO</string>
     <string name="username">Username</string>
     <string name="password">Password</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="for_age_above_18_and_less_than_45">FOR AGE ABOVE 18 and LESS THAN 45</string>
+    <string name="dec_by_10">Dec by 10</string>
+    <string name="inc_by_10">Inc by 10</string>
+    <string name="increase_the_number_of_vaccine_18_by">Increase the Number of Vaccine(18+) by</string>
+    <string name="submit">SUBMIT</string>
 </resources>

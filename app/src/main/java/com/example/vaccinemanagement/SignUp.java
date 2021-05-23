@@ -3,12 +3,14 @@ package com.example.vaccinemanagement;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -38,6 +40,15 @@ public class SignUp extends AppCompatActivity {
         loginhere=(TextView)findViewById(R.id.loginhere);
         login = new Intent(this,MainActivity.class);
         signup_success = new Intent(this,Home.class);
+        ImageView Image = (ImageView)findViewById(R.id.title);
+        Image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SignUp.this,FirstActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
         signup_b.setOnClickListener(new View.OnClickListener() {
             @Override
