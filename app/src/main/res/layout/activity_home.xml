@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,7 +12,7 @@
         android:id="@+id/bg_top_header"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:background="@drawable/ic_bg_topheader"
+        android:background="@drawable/ic_bg_user_topheader"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -27,148 +29,204 @@
         android:layout_marginLeft="26dp" />
 
     <TextView
-        android:id="@+id/user_id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="18dp"
-        android:layout_marginLeft="38dp"
-        android:layout_marginTop="112dp"
-        android:fontFamily="@font/fonty"
-        android:text="Vaccination Dashboard"
-        android:textColor="#F0F4F4"
         android:textSize="27sp"
-        app:layout_constraintStart_toEndOf="@id/user_photo" />
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card1"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_below="@+id/bg_top_header"
-        android:layout_marginLeft="26dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="16dp"
-        android:background="@color/cardColor"
-        app:cardCornerRadius="8dp"
-        app:cardElevation="6dp"
-
-        >
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal|center_vertical"
-            android:layout_margin="16dp"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:background="@drawable/ic_profile"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Vaccie for 18"
-                android:layout_marginTop="8dp"
-                android:fontFamily="@font/mo_re"
-                android:textColor="@color/textcardColor"
-                android:textSize="14sp"
-                android:textStyle="bold"/>
-        </LinearLayout>
-
-    </androidx.cardview.widget.CardView>
-    <androidx.cardview.widget.CardView
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_toRightOf="@+id/card1"
-        android:layout_below="@+id/bg_top_header"
-        android:layout_marginLeft="26dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="16dp"
-        android:background="@color/cardColor"
-        app:cardCornerRadius="8dp"
-        app:cardElevation="6dp">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal|center_vertical"
-            android:layout_margin="16dp"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:background="@drawable/ic_course_schedule"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Vaccine for >=45"
-                android:textColor="@color/textcardColor"
-                android:textSize="14sp"
-                android:layout_marginTop="8dp"
-                android:fontFamily="@font/mo_re"
-                android:textStyle="bold"/>
-        </LinearLayout>>
-
-
-    </androidx.cardview.widget.CardView>
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card3"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_below="@+id/card1"
-        android:layout_centerInParent="true"
-        android:layout_marginRight="16dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="16dp"
-        android:background="@color/cardColor"
-        app:cardCornerRadius="8dp"
-        app:cardElevation="6dp"
-
-        >
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal|center_vertical"
-            android:layout_margin="16dp"
-            android:gravity="center"
-            android:orientation="vertical">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:background="@drawable/ic_profile"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Covid test"
-                android:layout_marginTop="8dp"
-                android:fontFamily="@font/mo_re"
-                android:textColor="@color/textcardColor"
-                android:textSize="14sp"
-                android:textStyle="bold"/>
-        </LinearLayout>
-
-    </androidx.cardview.widget.CardView>
-
-    <TextView
+        android:text="Vaccination Dashboard"
+        android:id="@+id/user_id"
+        android:fontFamily="@font/fonty"
+        android:textColor="#F7FAF9"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="112dp"
+        android:layout_marginStart="18dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="USER VIEW"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:textSize="30sp">
+        app:layout_constraintStart_toEndOf="@id/user_photo"
+        android:layout_marginLeft="38dp" />
 
-    </TextView>
 
+    <RelativeLayout
+        android:id="@+id/downLayout"
+        android:layout_width="400dp"
+        android:layout_height="613dp"
+        android:layout_below="@+id/bg_top_header"
+        android:layout_marginTop="-82dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card1"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@color/cardColor"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="6dp"
+
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_margin="16dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="90dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/vaccine" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/mo_re"
+                    android:text="Book Vaccine"
+                    android:textColor="@color/textcardColor"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card2"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginLeft="17dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginBottom="16dp"
+            android:layout_toRightOf="@+id/card1"
+            android:background="@color/cardColor"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="6dp">
+
+            <LinearLayout
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/covidtest" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/mo_re"
+                    android:text="Book For Covid Test"
+                    android:textColor="@color/textcardColor"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            >
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card3"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_below="@+id/card1"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@color/cardColor"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="6dp"
+
+            >
+
+            <LinearLayout
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/help" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/mo_re"
+                    android:text="Covid Help"
+                    android:textColor="@color/textcardColor"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card4"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_below="@+id/card2"
+            android:layout_marginLeft="17dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginBottom="16dp"
+            android:layout_toEndOf="@+id/card3"
+            android:layout_toRightOf="@+id/card3"
+            android:background="@color/cardColor"
+            app:cardCornerRadius="8dp"
+
+            app:cardElevation="6dp">
+
+            <LinearLayout
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_margin="16dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/about" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/mo_re"
+                    android:text="How To Use ?"
+                    android:textColor="@color/textcardColor"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+
+        </androidx.cardview.widget.CardView>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LOGOUT"
+            android:id="@+id/logout"
+            android:layout_margin="20dp"
+            android:layout_below="@+id/card4"
+            android:layout_centerHorizontal="true"
+            >
+
+        </Button>
+
+
+
+    </RelativeLayout>
 </RelativeLayout>

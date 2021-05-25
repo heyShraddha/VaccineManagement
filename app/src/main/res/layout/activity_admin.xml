@@ -63,15 +63,13 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
-            android:id="@+id/login_b"
-            android:paddingLeft="45dp"
-            android:paddingRight="45dp"
-            android:paddingTop="20dp"
-            android:paddingBottom="20dp"
-            android:layout_margin="15dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="LOGIN"
+            android:id="@+id/login_b"
+            android:layout_margin="30dp"
+            android:layout_below="@+id/password"
+            android:layout_centerHorizontal="true"
             />
 
 

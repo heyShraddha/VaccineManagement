@@ -9,7 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.VaccineManagement">
-        <activity android:name=".AdminFortyFive"></activity>
+        <activity android:name=".UserHowToUse"></activity>
+        <activity android:name=".UserCovidHelp" />
+        <activity android:name=".UserBookCovidTest" />
+        <activity android:name=".UserBookVaccine" />
+        <activity android:name=".Admin_Analysis" />
+        <activity android:name=".AdminTest" />
+        <activity android:name=".AdminFortyFive" />
         <activity android:name=".AdminEighteen" />
         <activity android:name=".FirstActivity" />
         <activity android:name=".Home" />

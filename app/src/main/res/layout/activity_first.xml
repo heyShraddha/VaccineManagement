@@ -40,6 +40,7 @@
         app:layout_constraintStart_toEndOf="@id/user_photo"
         android:layout_marginLeft="38dp" />
 
+
     <RelativeLayout
         android:id="@+id/downLayout"
         android:layout_width="400dp"
@@ -51,7 +52,7 @@
             android:id="@+id/card1"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:layout_marginLeft="26dp"
+            android:layout_marginLeft="20dp"
             android:layout_marginTop="50dp"
             android:layout_marginRight="16dp"
             android:layout_marginBottom="16dp"
@@ -80,7 +81,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:fontFamily="@font/mo_re"
-                    android:text="Vaccie for 18"
+                    android:text="Vaccine for 18-44"
                     android:textColor="@color/textcardColor"
                     android:textSize="14sp"
                     android:textStyle="bold" />
@@ -93,9 +94,8 @@
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_below="@+id/bg_top_header"
-            android:layout_marginLeft="26dp"
+            android:layout_marginLeft="17dp"
             android:layout_marginTop="50dp"
-            android:layout_marginRight="16dp"
             android:layout_marginBottom="16dp"
             android:layout_toRightOf="@+id/card1"
             android:background="@color/cardColor"
@@ -112,16 +112,18 @@
 
                 <ImageView
                     android:layout_width="100dp"
-                    android:layout_height="90dp"
+                    android:layout_height="80dp"
                     android:layout_gravity="center_horizontal"
                     android:background="@drawable/vaccine" />
+
+
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:fontFamily="@font/mo_re"
-                    android:text="Vaccine for >=45"
+                    android:text="Vaccine for 45+"
                     android:textColor="@color/textcardColor"
                     android:textSize="14sp"
                     android:textStyle="bold" />
@@ -136,8 +138,8 @@
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_below="@+id/card1"
-            android:layout_marginLeft="26dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="35dp"
             android:layout_marginRight="16dp"
             android:layout_marginBottom="16dp"
             android:background="@color/cardColor"
@@ -178,8 +180,8 @@
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_below="@+id/card2"
-            android:layout_marginLeft="25dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginLeft="17dp"
+            android:layout_marginTop="35dp"
             android:layout_marginBottom="16dp"
             android:layout_toEndOf="@+id/card3"
             android:layout_toRightOf="@+id/card3"
@@ -213,7 +215,20 @@
                     android:textStyle="bold" />
             </LinearLayout>
 
+
+
         </androidx.cardview.widget.CardView>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LOGOUT"
+            android:id="@+id/logout"
+            android:layout_margin="30dp"
+            android:layout_below="@+id/card4"
+            android:layout_centerHorizontal="true"
+            >
+
+        </Button>
 
 
 

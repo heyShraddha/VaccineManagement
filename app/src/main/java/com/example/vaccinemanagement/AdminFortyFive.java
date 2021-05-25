@@ -17,6 +17,7 @@ public class AdminFortyFive extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_forty_five);
 
+        getSupportActionBar().hide();
 
         int value = FirstActivity.count_of_total_45_test;
         TextView showTest = (TextView)findViewById(R.id.showTest);
@@ -31,6 +32,31 @@ public class AdminFortyFive extends AppCompatActivity {
         int zeroValue = 0;
         incBy.setText(String.valueOf(zeroValue));
         decBy.setText(String.valueOf(zeroValue));
+
+        TextView IncreaseByText = (TextView)findViewById(R.id.increaseBy);
+        TextView DecreaseByText = (TextView)findViewById(R.id.decreaseBy);
+
+        incBy.setEnabled(true);
+        decBy.setEnabled(false);
+
+        IncreaseByText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                incBy.setEnabled(true);
+                decBy.setEnabled(false);
+            }
+        });
+
+        DecreaseByText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                decBy.setEnabled(true);
+                incBy.setEnabled(false);
+            }
+        });
+
         b_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -43,23 +69,22 @@ public class AdminFortyFive extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if(!(incBy.getText().toString().equalsIgnoreCase("") )&& decBy.getText().toString().equalsIgnoreCase("") )
+                int flag = 0;
+                if(incBy.isEnabled() == true)
                 {
+                    flag =1;
                     FirstActivity.count_of_total_45_vaccine = FirstActivity.count_of_total_45_vaccine + Integer.parseInt(incBy.getText().toString());
                 }
-                else if(!(decBy.getText().toString().equalsIgnoreCase("") )&& incBy.getText().toString().equalsIgnoreCase(""))
+                if(decBy.isEnabled() == true)
                 {
+                    flag=0;
                     FirstActivity.count_of_total_45_vaccine = FirstActivity.count_of_total_45_vaccine - Integer.parseInt(decBy.getText().toString());
                 }
-                else if (!(decBy.getText().toString().equalsIgnoreCase("") ) &&  !(incBy.getText().toString().equalsIgnoreCase("") ))
-                {
-                    Toast.makeText(AdminFortyFive.this, "Enter something to process", Toast.LENGTH_SHORT).show();
-                }
+
+                if(flag == 0)
+                    Toast.makeText(AdminFortyFive.this, "Vaccine Decreased By "+decBy.getText(), Toast.LENGTH_SHORT).show();
                 else
-                {
-                    FirstActivity.count_of_total_45_vaccine = FirstActivity.count_of_total_45_vaccine + Integer.parseInt(incBy.getText().toString());
-                    FirstActivity.count_of_total_45_vaccine = FirstActivity.count_of_total_45_vaccine - Integer.parseInt(decBy.getText().toString());
-                }
+                    Toast.makeText(AdminFortyFive.this, "Vaccine Increased By "+incBy.getText(), Toast.LENGTH_SHORT).show();
 
                 showVaccine.setText(String.valueOf(FirstActivity.count_of_total_45_vaccine));
                 incBy.setText(String.valueOf(zeroValue));

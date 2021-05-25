@@ -27,7 +27,7 @@
 
     <TextView
         android:textSize="27sp"
-        android:text="Vaccine Dashboard for 45+ "
+        android:text="Covid Test Dashboard"
         android:id="@+id/user_id"
         android:fontFamily="@font/fonty"
         android:textColor="#F7FAF9"
@@ -64,22 +64,24 @@
                 android:layout_margin="16dp">
 
                 <TextView
+                    android:id="@+id/text18"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginLeft="30dp"
                     android:fontFamily="@font/mo_re"
-                    android:text="Vaccine Available "
+                    android:text="Test 18+ Done  "
                     android:textColor="#4A4747"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/text45"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="25dp"
+                    android:layout_marginLeft="35dp"
                     android:fontFamily="@font/mo_re"
-                    android:text="Test Available "
+                    android:text="Test 45+ Done"
                     android:textColor="#4A4747"
                     android:textSize="18sp"
                     android:textStyle="bold" />
@@ -92,24 +94,24 @@
                 android:layout_gravity="center_horizontal|center_vertical">
 
                 <TextView
-                    android:id="@+id/showVaccine"
+                    android:id="@+id/show18vaccine"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
-                    android:layout_marginLeft="90dp"
+                    android:layout_marginLeft="80dp"
                     android:fontFamily="@font/mo_re"
-
+                    android:text="40"
                     android:textColor="#078998"
                     android:textSize="24sp"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/showTest"
+                    android:id="@+id/show45vaccine"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="160dp"
+                    android:layout_marginLeft="140dp"
                     android:fontFamily="@font/mo_re"
-
+                    android:text="70"
                     android:textColor="#0A7E6F"
                     android:textSize="24sp"
                     android:textStyle="bold" />
@@ -125,15 +127,15 @@
         android:layout_marginTop="17dp"
         android:id="@+id/increaseBy"
         android:textSize="20dp"
-        android:layout_marginLeft="40dp"
-        android:text="Inc Vaccine by ">
+        android:layout_marginLeft="20dp"
+        android:text="Inc Covid Test by ">
 
     </TextView>
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/setDecBy"
         android:layout_marginTop="85dp"
-        android:layout_marginLeft="55dp"
-        android:layout_toRightOf="@+id/decreaseBy"
+        android:layout_marginLeft="60dp"
+        android:layout_toRightOf="@+id/increaseBy"
         android:layout_below="@id/card1"
         android:layout_width="100dp"
         android:layout_height="100dp">
@@ -141,8 +143,8 @@
         <EditText
             android:id="@+id/getDecBy"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:digits="0123456789"
+            android:layout_height="wrap_content"
             android:background="@drawable/roundededittext" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -152,9 +154,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/increaseBy"
-        android:layout_marginLeft="40dp"
+        android:layout_marginLeft="20dp"
         android:layout_marginTop="60dp"
-        android:text="Dec Vaccine by"
+        android:text="Dec Covid Test by"
         android:textColor="#009688"
         android:textSize="20dp">
 
@@ -164,7 +166,7 @@
         android:id="@+id/setIncBy"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="55dp"
-        android:layout_toRightOf="@+id/increaseBy"
+        android:layout_toRightOf="@+id/decreaseBy"
         android:layout_below="@id/card1"
         android:layout_width="100dp"
         android:layout_height="100dp">
@@ -172,8 +174,8 @@
         <EditText
             android:id="@+id/getIncBy"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:digits="0123456789"
+            android:layout_height="wrap_content"
             android:background="@drawable/roundededittext" />
 
     </com.google.android.material.textfield.TextInputLayout>
