@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
     <View
         android:id="@+id/bg_top_header"
         android:layout_width="match_parent"
@@ -39,6 +40,8 @@
         android:textSize="27sp"
         app:layout_constraintStart_toEndOf="@id/user_photo" />
 
+
+
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -50,6 +53,7 @@
 
     </ImageView>
     <ImageView
+        android:id="@+id/secondImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="290dp"
@@ -59,18 +63,8 @@
         android:src="@drawable/ivrs">
 
     </ImageView>
-    <Button
-        android:id="@+id/back_b"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="650dp"
-        android:layout_centerHorizontal="true"
-        android:text="@string/back">
 
-    </Button>
+    </RelativeLayout>
 
-
-
-</RelativeLayout>
 
 
